@@ -3,21 +3,21 @@ import Footer from './01-react-introduction/Footer.jsx'
 import Food from "./01-react-introduction/Food.jsx";
 import Card from "./02-card-components/Card.jsx";
 import Button from "./03-add-css-styles/Button.jsx";
+import Student from "./04-props/Student.jsx";
+import { profile } from "../data/profiles.js";
 
 function App() {
-
-  return(
-    <>
-        <Header/>
-        <Food/>
-        <Card/>
-        <Button/>
-        <Card/>
-        <Card/>
-        <Footer/>
-    </>
-
-  );
-}
+    function renderStudents(profile) {
+      return profile.map((student) => (
+        <Student key={student.id} name={student.name} picture={student.picture} />
+      ));
+    }
+  
+    return (
+      <>
+        <div className="student-container">{renderStudents(profile)}</div>
+      </>
+    );
+  }
 
 export default App

@@ -161,7 +161,7 @@ function Button(){
 
 ```
 
-- the `className` follows the format of `styles.(name-of-the-class)`
+- the `className` follows the format of `styles.(name-of-the-class)` or basically it calls a property of the object style
 
 3. INLINE STYLING
    this is done by creating an object an putting all your css value as properties and string. you will also changed the naming convention to camelCase
@@ -189,3 +189,37 @@ function Button(){
 
 - read-only properties that are shared between components. A parent component can send data to a child component
   `<Component key=value>` when you include a component within a parent, you can send that child component key value pairs
+
+### creating a component with props
+
+- the function component must have a parameter named `props`
+
+```bash
+
+function Student(props){
+    return(
+        <div>
+            <p>Name: {props.name}</p>
+        </div>
+    )
+}
+
+export default Student
+```
+
+- when using the component you will then give the data by sending key value pait. it is done by adding the properties either through inline or objects
+
+```bash
+import Student from "./04-props/Student.jsx";
+
+function App() {
+
+  return(
+    <>
+    <Student name="Spongebob"></Student>
+    </>
+
+  );
+}
+
+```

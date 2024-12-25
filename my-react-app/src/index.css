@@ -28,3 +28,9 @@
 .card p {
     flex: 1;
 }
+.student{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 50%);
+}
