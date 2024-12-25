@@ -223,3 +223,55 @@ function App() {
 }
 
 ```
+
+### PROP TYPE
+
+- a mechanism that ensures that the passed value is of the correct datatype
+- this is imported
+
+```bash
+import PropTypes from 'prop-types'
+import styles from './StudentCard.module.css'
+
+function StudentCard(props){
+    return(
+        <div className={styles.studentCard}>
+            <p>Name: {props.name}</p>
+           <img className={styles.studentIMG} src={props.picture} alt="profile-picture" />
+        </div>
+    )
+}
+StudentCard.propTypes = {
+    name: PropTypes.string,
+    picture: PropTypes.string
+}
+```
+
+### Default props
+
+- default values for props in case they are not passed from the parent component
+
+```bash
+import PropTypes from 'prop-types'
+import styles from './StudentCard.module.css'
+
+function StudentCard(props){
+    return(
+        <div className={styles.studentCard}>
+            <p>Name: {props.name}</p>
+           <img className={styles.studentIMG} src={props.picture ? props.picture : "https://www.pngitem.com/pimgs/m/579-5798505_user-placeholder-svg-hd-png-download.png"} />
+        </div>
+    )
+}
+StudentCard.propTypes = {
+    name: PropTypes.string,
+    picture: PropTypes.string,
+    id: PropTypes.string,
+}
+StudentCard.defaultProps = {
+    name: "guest",
+    img: 'https://via.placeholder.com/150',
+    id: 'n/a'
+}
+export default StudentCard
+```
