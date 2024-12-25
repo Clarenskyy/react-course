@@ -135,3 +135,52 @@ function App() {
 ### `placeholder image`
 
 https://via.placeholder.com/size(150/200/etc)
+
+### How to style reac components with CSS
+
+1.  EXTERNAL STYLING
+
+- it is styling normally used, basically on a one `.css` file you will every component there
+  this is usually used for global styling but not preffered for big project as it could cause naming conflicts
+
+2. MODULE STYLING
+
+- creating a dedicated css style sheet specifically for a component
+- jsx has a special function where we can import styles from a file using modules this is done in the `button` file
+- this avoid naming conflicts as react makes an id
+
+```bash
+import styles from "./Button.module.css"
+
+function Button(){
+
+    return(
+        <button className={styles.button}>Click me</button>
+    );
+}
+
+```
+
+- the `className` follows the format of `styles.(name-of-the-class)`
+
+3. INLINE STYLING
+   this is done by creating an object an putting all your css value as properties and string. you will also changed the naming convention to camelCase
+
+```bash
+function Button(){
+
+    const styles = {
+        backgroundColor: "hsl(200, 100%, 50%)",
+    color: "white",
+    padding: "10px 20px",
+    borderRadius: "5px",
+    border: "none",
+    cursor: "pointer",
+    }
+
+    return(
+        <button className={styles.button}>Click me</button>
+    );
+}
+
+```
