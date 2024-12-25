@@ -1,7 +1,7 @@
 ## REACT
 
 - javascript library used to thats use to build ID
-- uses **COMPONENTS**, they function as reusable js and html code. like lego
+- uses **COMPONENTS**, they function as reusable js and html code. like lego. its a section of resuable jsx code. its a html like code that could contain js
 - uses **JSX** (JavaScript XML) which allows you to write html like code within our js files.
 - utilizes virtual dom
 
@@ -127,3 +127,11 @@ function App() {
 ### `hr`
 
 - self closing tag this creates a horizontal line
+
+### `className=""`
+
+- in REACT `class=""` is changed to `className=""`
+
+### `placeholder image`
+
+https://via.placeholder.com/size(150/200/etc)
