@@ -184,3 +184,8 @@ function Button(){
 }
 
 ```
+
+## PROPS
+
+- read-only properties that are shared between components. A parent component can send data to a child component
+  `<Component key=value>` when you include a component within a parent, you can send that child component key value pairs
