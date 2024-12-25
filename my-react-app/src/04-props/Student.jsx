@@ -1,11 +1,16 @@
+import StudentCard from "./StudentCard.jsx";
+import { profile } from "../../data/profiles.js";
 
-function Student(props){
-    return(
-        <div className="student">
-            <p>Name: {props.name}</p>
-           <img src={props.picture} alt="profile-picture" />
-        </div>
-    )
-}
+function Student() {function renderStudents(profile) {
+    return profile.map((student) => (
+      <StudentCard key={student.id} name={student.name} picture={student.picture} />
+    ));
+  }
 
-export default Student
+  return (
+    <>
+      <div className="student-container">{renderStudents(profile)}</div>
+    </>
+  );}
+
+  export default Student

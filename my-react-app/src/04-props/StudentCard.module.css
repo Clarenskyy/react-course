@@ -1,0 +1,12 @@
+.studentCard{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 50%);
+    max-width: 500px;
+    margin: 10px;
+}
+
+.studentIMG {
+    width: 100%;
+}
