@@ -9,13 +9,14 @@ import UserGreeting from "./05-conditional-rendering/UserGreeting.jsx"; //lesson
 import List from "./06-rendering-list/List.jsx";
 import {fruits, vegetables, EmptyArray} from '../data/06-rendering-list.js'// lesson 6
 import ButtonClickEvent from "./07-click-events/ButtonClickEvent.jsx";
-import ProfilePicture from './07-click-events/ProfilePicture.jsx'
+import ProfilePicture from './07-click-events/ProfilePicture.jsx' //lesson 7
+import MyComponent from "./08-usestate-hook/MyComponent.jsx";
 
 function App() {
 
     return (
       <>
-        <ProfilePicture />  
+        <MyComponent />  
       </>
     );
   }

@@ -441,3 +441,41 @@ export default ButtonClickEvent
 ```
 
 this will change the text of click me to ouch
+
+## REACT HOOK
+
+- special function that allows functional components to use React features without writing class components (`useState`, `useEffect`, `useContext`, `useReducer`, `useCallback`, and more in react doc)
+
+### `useState()`
+
+- a react hook that allows the creation of **stateful variable** AND a setter function to update its value in the Virtual DOM
+  [name, setName]
+
+```bash
+import React, {useState} from "react";
+
+function MyComponent(){
+    const [name, setName] = useState();
+
+    const updateName = () => {
+        setName('spongebob');
+    }
+
+    return(
+        <div>
+            <p>Name: {name}</p>
+            <button onClick={updateName}>Set Name</button>
+        </div>
+    )
+}
+
+export default MyComponent
+```
+
+- this creates a stateful variable, of which when changes are done it will immediately display or render that change in the browser without the need to refresh. this is really useful
+
+```bash
+const [name, setName] = useState("Guest");
+```
+
+- to explain a lil bit this, the `[]` is distructuring the `useState()`. this will be needed for each variable you create. the parameter you provide in the `useState("here")` will be the default value of the variable before any changes.
