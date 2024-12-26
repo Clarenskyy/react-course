@@ -11,13 +11,14 @@ import {fruits, vegetables, EmptyArray} from '../data/06-rendering-list.js'// le
 import ButtonClickEvent from "./07-click-events/ButtonClickEvent.jsx";
 import ProfilePicture from './07-click-events/ProfilePicture.jsx' //lesson 7
 import MyComponent from "./08-usestate-hook/MyComponent.jsx"
-import Counter from './08-usestate-hook/Counter.jsx'
+import Counter from './08-usestate-hook/Counter.jsx' //lesson 8
+import MyComponent2 from "./09-onchange-hook/MyComponent2.jsx";
 
 function App() {
 
     return (
       <>
-        <Counter />  
+        <MyComponent2 />  
       </>
     );
   }
