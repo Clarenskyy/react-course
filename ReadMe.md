@@ -392,6 +392,12 @@ display would be:
 - an interaction when a user clicks on a specific element we can respond to clicks by passing a callback to the onclick event handler
 
 in clicking events:
+syntaxes:
+
+```bash
+onClick=""
+onDoubleClick=""
+```
 
 ```bash
 <button onClick={handleClick2('Klay')}>Click Me ;></button>
