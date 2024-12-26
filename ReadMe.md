@@ -275,3 +275,34 @@ StudentCard.defaultProps = {
 }
 export default StudentCard
 ```
+
+## CONDITIONAL RENDERIG
+
+- allows you to control what gets rendered in your application based on certain condition
+
+heres an example using `if/else`:
+
+```bash
+function UserGreeting(props) {
+
+    if(props.isLoggedIn){
+        return <h2> Welcome {props.username}</h2>
+    } else {
+        return <h2> Please Log in to continue </h2>
+    }
+}
+
+export default UserGreeting
+```
+
+heres an alternative using ternary:
+
+```bash
+function UserGreeting(props) {
+
+    return (props.isLoggedIn ?  <h2> Welcome {props.username}</h2> :
+                                <h2> Please Log in to continue</h2>)
+}
+
+export default UserGreeting
+```
