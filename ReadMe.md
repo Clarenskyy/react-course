@@ -404,3 +404,33 @@ in clicking events:
 ```
 
 - this will then work as expected
+
+### event object
+
+```bash
+function ButtonClickEvent() {
+    const handleClick = (e) => { console.log(e) }
+
+ return(
+    <button onClick={(e) => handleClick(e)}>Click Me ;></button>
+ )
+}
+
+export default ButtonClickEvent
+```
+
+- this will `console.log()` all the properties in an event we can then through it changes some properties just be creative. NOTE: `e` is just short for `event`:
+
+```bash
+function ButtonClickEvent() {
+    const handleClick = (e) => { e.target.textContent = "OUCH! ;[" }
+
+ return(
+    <button onClick={(e) => handleClick(e)}>Click Me ;></button>
+ )
+}
+
+export default ButtonClickEvent
+```
+
+this will change the text of click me to ouch
