@@ -393,6 +393,7 @@ display would be:
 
 in clicking events:
 syntaxes:
+NOTE THAT THIS CAN BE USE OUTSIDE A BUTTON
 
 ```bash
 onClick=""
