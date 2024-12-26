@@ -247,6 +247,21 @@ StudentCard.propTypes = {
 }
 ```
 
+#### `.arrayOf(PropTypes.shape())`
+
+- this is used to check the value of an array that has properties inside the `.shape()` method it will check each property you provide, like in the example below
+
+```bash
+List.proptypes = {
+    category: PropTypes.string,
+    items: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+        calories: PropTypes.number
+    }))
+}
+```
+
 ### Default props
 
 - default values for props in case they are not passed from the parent component
@@ -305,4 +320,69 @@ function UserGreeting(props) {
 }
 
 export default UserGreeting
+```
+
+## renderiing list
+
+- just some tricks on how to render an array
+- note that react will want an id for each item in the array. just use a `random key id generator` for each item in the list or find an `external library` that generates key id
+
+### sorting tricks
+
+```bash
+    //fruits.sort((a, b) => a.name.localeCompare(b.name)); //ALPHABETICAL
+    //fruits.sort((a, b) => b.name.localeCompare(a.name)); // REVERSE ALPHABETICAL
+    //fruits.sort((a, b) => a.calories - b.calories) //NUMERIC
+    //fruits.sort((a, b) => b.calories - a.calories) //REVERSE NUMERIC
+```
+
+for reference heres the array for the examples above:
+
+```bash
+    const fruits = [{
+        id: "q8Ilr2UO2V",
+        name: "apple",
+        calories: 95
+    }, {
+        id: "50Se7ekKqt",
+        name: "orange",
+        calories: 45
+    }, {
+        id: "Y1kZTPbTkg",
+        name: "banana",
+        calories: 105
+    }, {
+        id: "j6D3dW2qFS",
+        name: "coconut",
+        calories: 159
+    }, {
+        id: "iVXGtpyeAH",
+        name: "pineapple",
+        calories: 37
+    }]
+
+```
+
+### `filter()`
+
+- its a built-in js code that filters an item in an array using the given criteria:
+- inside the filter you will put a function and return the result it its false it will filter that item
+  using the same array as above:
+
+```bash
+const lowCalFruits = fruits.filter(fruit => fruit.calories < 100)
+    const listItems = lowCalFruits.map(fruit =>
+    <li key={fruit.id}>{fruit.name}: &nbsp;
+    <b>{fruit.calories}</b></li>
+    );
+
+    return(<ol>{listItems}</ol>)
+```
+
+display would be:
+
+```bash
+1. apple:  95
+2. orange:  45
+3. pineapple:  37
 ```
