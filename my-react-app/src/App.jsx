@@ -7,13 +7,14 @@ import Student from "./04-props/Student.jsx";
 import StudentCard from "./04-props/StudentCard.jsx"; //lesson 4
 import UserGreeting from "./05-conditional-rendering/UserGreeting.jsx"; //lesson 5
 import List from "./06-rendering-list/List.jsx";
-import {fruits, vegetables, EmptyArray} from '../data/06-rendering-list.js'
+import {fruits, vegetables, EmptyArray} from '../data/06-rendering-list.js'// lesson 6
+import ButtonClickEvent from "./07-click-events/ButtonClickEvent.jsx";
 
 function App() {
 
     return (
       <>
-        
+        <ButtonClickEvent />  
       </>
     );
   }

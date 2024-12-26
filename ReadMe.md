@@ -390,3 +390,17 @@ display would be:
 ## click event
 
 - an interaction when a user clicks on a specific element we can respond to clicks by passing a callback to the onclick event handler
+
+in clicking events:
+
+```bash
+<button onClick={handleClick2('Klay')}>Click Me ;></button>
+```
+
+- this will not work, this is because jsx is design to run the function. and in turn the onclick will not work. to fix this just wrap it up in an arrow funtion
+
+```bash
+<button onClick={() => handleClick2('Klay')}>Click Me ;></button>
+```
+
+- this will then work as expected
